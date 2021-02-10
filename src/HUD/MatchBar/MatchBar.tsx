@@ -2,6 +2,7 @@ import React from "react";
 import * as I from "csgogsi-socket";
 import "./matchbar.scss";
 import TeamScore from "./TeamScore";
+import TeamLogo from './TeamLogo';
 import Bomb from "./../Timers/BombTimer";
 import Countdown from "./../Timers/Countdown";
 import { GSI } from "../../App";

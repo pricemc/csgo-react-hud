@@ -14,11 +14,15 @@ export default class TeamLogo extends React.Component<{ team?: Team | I.Team | n
     } else if('id' in team && team.id){
       id = team.id;
     }
-    return (
-      <div className={`logo`}>
-          { logo && id ? <img src={`${apiUrl}api/teams/logo/${id}`} width={this.props.width} height={this.props.height} alt={'Team logo'} /> : ''}
-      </div>
-    );
+    if(team.logo){
+      return (
+        <div className={`logo`}>
+            { logo && id ? <img src={`${apiUrl}api/teams/logo/${id}`} width={this.props.width} height={this.props.height} alt={'Team logo'} /> : ''}
+        </div>
+      );
+    } else {
+      return "";
+    }
   }
 
 }

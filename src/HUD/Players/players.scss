@@ -23,14 +23,14 @@
         }
         &.right {
             .player .hp_bar {
-                background: linear-gradient(90deg, var(--color-ct-dark) 0%, var(--color-ct-middle) 47%, var(--color-new-ct) 100%);
+                background: linear-gradient(270deg, var(--color-ct-dark) 0%, var(--color-ct-middle) 47%, var(--color-new-ct) 100%);
             }
         }
     }
     &.T {
         &.left {
             .player .hp_bar {
-                background: linear-gradient(90deg, var(--color-new-t) 0%, var(--color-t-middle) 47%, var(--color-t-dark) 100%);
+                background: linear-gradient(270deg, var(--color-new-t) 0%, var(--color-t-middle) 47%, var(--color-t-dark) 100%);
             }
         }
         &.right {
