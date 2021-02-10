@@ -31,17 +31,17 @@ export default class SideBox extends React.Component<{ side: 'left' | 'right', h
 	
 	render() {
         const { image, title, subtitle} = this.state;
-        if(!title) return '';
+        if(!title && !image) return '';
         const encoding = image && isSvg(Buffer.from(image, 'base64')) ? 'svg+xml':'png';
 		return (
-			<div className={`sidebox ${this.props.side} ${this.props.hide ? 'hide':''}`}>
+			<div className={`sidebox ${this.props.side} ${this.props.hide ? 'hide':''}`} style={{backgroundImage: `url(${`data:image/${encoding};base64,${image}`})`}}>
                 <div className="title_container">
                     <div className="title">{title}</div>
                     <div className="subtitle">{subtitle}</div>
                 </div>
-                <div className="image_container">
+                {/* <div className="image_container">
                     {this.state.image ? <img src={`data:image/${encoding};base64,${image}`} id={`image_left`} alt={'Left'}/>:''}
-                </div>
+                </div> */}
             </div>
 		);
 	}

@@ -46,10 +46,16 @@ code {
   --dev-purple: rgba(200, 0, 255, 1);
   --color-t: #c19511;
   --color-ct: #5788a8;
-  --color-new-t: #f0c941;
-  --color-new-ct: #5ab8f4;
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
+
+  --color-ct-dark: rgba(66,83,99,1);
+  --color-ct-middle: rgba(41,113,159,1);
+  --color-new-ct: #5ab8f4;
+
+  --color-t-dark: rgba(110,89,36,1);
+  --color-t-middle: rgba(156,107,7,1);
+  --color-new-t: #f0c941;
 }
 
 

@@ -1,7 +1,7 @@
 {
-    "name":"Lexogrine HUD",
+    "name":"whoisallo personal hud",
     "version":"1.9.0",
-    "author":"Lexogrine",
+    "author":"whoisallo",
     "legacy": false,
     "radar": true,
     "killfeed": true,

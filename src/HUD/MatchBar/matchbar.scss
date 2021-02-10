@@ -26,8 +26,9 @@
 	top: 10px;
 	left: 50%;
 	transform: translateX(-50%);
+	color: var(--white-full);
 	.CT {
-		color: var(--color-new-ct);
+		// color: var(--color-new-ct);
 		.round-thingy {
 			.inner {
 				background-color: #28abff;
@@ -36,7 +37,7 @@
 		}
 	}
 	.T {
-		color: var(--color-new-t);
+		// color: var(--color-new-t);
 		.round-thingy {
 			.inner {
 				background-color: #ffc600;
@@ -53,7 +54,7 @@
 		margin-left: 8px;
 		margin-right: 8px;
 		background-color: var(--sub-panel-color);
-        top: -10px;
+        // top: -10px;
         &.no-bo {
             height: 87px;
         }
@@ -133,7 +134,7 @@
 			height: 70px;
 			align-items: center;
 			overflow: hidden;
-			background-color: var(--sub-panel-color);
+			// background-color: var(--sub-panel-color);
 			img {
 				max-width: 90%;
 				max-height: 65%;
@@ -168,7 +169,7 @@
 		justify-content: center;
 		font-weight: 600;
 		font-size: 30px;
-		background-color: var(--sub-panel-color);
+		// background-color: var(--sub-panel-color);
 	}
 	.round-thingy {
 		width: 60px;
@@ -193,7 +194,13 @@
 		justify-content: center;
 		font-weight: 600;
 		font-size: 36px;
-		background-color: var(--sub-panel-color);
+		// background-color: var(--sub-panel-color);
+		&.CT {
+			background-color: var(--color-new-ct);
+		}
+		&.T {
+			background-color: var(--color-new-t);
+		}
 	}
 	.bar {
 		display: flex;
@@ -315,6 +322,7 @@
 	background-color: var(--color-new-t);
 }
 #series_container {
+	top: 10;
 	display: flex;
 	flex-direction: row;
 	width: 126px;

@@ -5,14 +5,38 @@
     flex-direction: column;
     opacity: 1;
     transition: opacity 0.75s;
+    // &.CT {
+    //     .player .hp_bar {
+    //         background-color: var(--color-new-ct);
+    //     }
+    // }
+    // &.T {
+    //     .player .hp_bar {
+    //         background-color: var(--color-new-t);
+    //     }
+    // }
     &.CT {
-        .player .hp_bar {
-            background-color: var(--color-new-ct);
+        &.left {
+            .player .hp_bar {
+                background: linear-gradient(90deg, var(--color-ct-dark) 0%, var(--color-ct-middle) 47%, var(--color-new-ct) 100%);
+            }
+        }
+        &.right {
+            .player .hp_bar {
+                background: linear-gradient(90deg, var(--color-ct-dark) 0%, var(--color-ct-middle) 47%, var(--color-new-ct) 100%);
+            }
         }
     }
     &.T {
-        .player .hp_bar {
-            background-color: var(--color-new-t);
+        &.left {
+            .player .hp_bar {
+                background: linear-gradient(90deg, var(--color-new-t) 0%, var(--color-t-middle) 47%, var(--color-t-dark) 100%);
+            }
+        }
+        &.right {
+            .player .hp_bar {
+                background: linear-gradient(90deg, var(--color-new-t) 0%, var(--color-t-middle) 47%, var(--color-t-dark) 100%);
+            }
         }
     }
     &.hide {
@@ -56,6 +80,9 @@
             .player_data {
                 flex-direction: row-reverse;
                 .hp_bar {
+                    align-self: flex-end;
+                }
+                .hp_bar_red {
                     align-self: flex-end;
                 }
                 .row {
@@ -103,6 +130,10 @@
         }
         &.dead {
             opacity: 0.7;
+            .hp_bar_red {
+                transition: width 0.25s;
+                transition-delay: 0s;
+            }
             .player_side_bar {
                 background-color: var(--main-panel-color) !important;
             }
@@ -134,9 +165,9 @@
                 }
             }
         }
-        &:last-child .player_data {
-            border-radius: 0 0 20px 20px;
-        }
+        // &:last-child .player_data {
+        //     border-radius: 0 0 20px 20px;
+        // }
         .player_side_bar {
             width: 10px;
             height: 70px;
@@ -182,10 +213,18 @@
                 flex: 1;
                 min-width: 0;
                 .hp_bar {
-                    height: 2px;
+                    height: 50%;
+		            position:absolute;
                     &.low {
                         background-color: red;
                     }
+                }
+                .hp_bar_red {
+                    height: 50%;
+                      background-color:red;
+                      transition: width 0.25s 150ms;
+                      transition-delay: 2s;
+                      position:absolute;
                 }
                 .row {
                     flex: 1;
