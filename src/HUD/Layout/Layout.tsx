@@ -78,7 +78,7 @@ export default class Layout extends React.Component<Props, State> {
 
     return (
       <div className="layout">
-        <div className={`players_alive`}>
+        <div className={`players_alive ${isFreezetime? "hide" : ""}`}>
           <div className="title_container">Players alive</div>
           <div className="counter_container">
             <div className={`team_counter ${left.side}`}>{leftPlayers.filter(player => player.state.health > 0).length}</div>
@@ -92,7 +92,7 @@ export default class Layout extends React.Component<Props, State> {
         <MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />
         <Pause  phase={game.phase_countdowns}/>
         <Timeout map={game.map} phase={game.phase_countdowns} />
-        <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} />
+        {/* <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} /> */}
 
         <Tournament />
 

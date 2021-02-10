@@ -3,6 +3,7 @@ import * as I from "csgogsi-socket";
 import "./matchbar.scss";
 import TeamScore from "./TeamScore";
 import TeamLogo from './TeamLogo';
+import SeriesBox from './SeriesBox';
 import Bomb from "./../Timers/BombTimer";
 import Countdown from "./../Timers/Countdown";
 import { GSI } from "../../App";
@@ -189,13 +190,17 @@ export default class TeamBox extends React.Component<IProps, IState> {
       <>
         <div id={`matchbar`}>
           <TeamScore team={left} orientation={"left"} timer={leftTimer} showWin={winState.show && winState.side === "left"} />
+          
           <div className={`score left ${left.side}`}>{left.score}</div>
+          <TeamLogo team={left} />
           <div id="timer" className={bo === 0 ? 'no-bo' : ''}>
             <div id={`round_timer_text`} className={isPlanted ? "hide":""}>{time}</div>
             <div id="round_now" className={isPlanted ? "hide":""}>{this.getRoundLabel()}</div>
-            <Bomb />
+          <Bomb />
           </div>
+          <TeamLogo team={right} />
           <div className={`score right ${right.side}`}>{right.score}</div>
+          
           <TeamScore team={right} orientation={"right"} timer={rightTimer} showWin={winState.show && winState.side === "right"} />
         </div>
       </>

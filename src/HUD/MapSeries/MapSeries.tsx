@@ -44,8 +44,9 @@ export default class MapSeries extends React.Component<IProps> {
 
     render() {
         const { match, teams, isFreezetime, map } = this.props;
-        if (!match || !match.vetos.length || match.vetos[0].type === "decider") return null;
-        console.log(match.vetos);
+        const bo = (match && Number(match.matchType.substr(-1))) || 0;
+        if (!match || bo === 1 ) return null;
+        // console.log(match.vetos);
         return (
             <div className={`map_series_container ${isFreezetime ? 'show': 'hide'}`}>
                 <div className="title_bar">
